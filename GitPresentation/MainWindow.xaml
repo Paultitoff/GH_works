@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GitPresentation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="15">
+    <Grid Margin="15" Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
@@ -16,9 +16,9 @@
                  Grid.Row="0"
                  TextWrapping="Wrap"
                  FontSize="20"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,0">
-            <Button Content="Открыть в новом окне" Width="180" Height="35" Click="OpenButton_Click" Margin="0,0,8,0"/>
-            <Button Content="Очистить" Width="80" Height="35" Click="ClearButton_Click"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,12">
+            <Button Content="Открыть в новом окне" BorderBrush="Black" Background="Aquamarine" BorderThickness="1px" Width="180" Height="35" Click="OpenButton_Click" Margin="0,0,8,0"/>
+            <Button Content="Очистить" BorderBrush="Black" Background="Red" BorderThickness="1px" Width="80" Height="35" Click="ClearButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
