@@ -10,26 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace GitPresentation
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для OutputWindow.xaml
+    /// </summary>
+    public partial class OutputWindow : Window
     {
-        public MainWindow()
+        public OutputWindow(string text)
         {
             InitializeComponent();
+            OutputTextBlock.Text = text;
         }
-        private void OpenButton_Click(object sender, RoutedEventArgs e)
+
+        
+
+        private void Close_Click(object sender, RoutedEventArgs e)
         {
-            string text = InputTextBox.Text;
-            var outW = new OutputWindow(text);
-            outW.Show();
-        }
-        private void ClearButton_Click(object sender, RoutedEventArgs e)
-        {
-            InputTextBox.Clear();
+            Close();
         }
     }
 }
