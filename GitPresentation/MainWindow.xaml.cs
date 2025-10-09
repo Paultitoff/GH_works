@@ -23,10 +23,11 @@ namespace GitPresentation
         }
         private void OpenButton_Click(object sender, RoutedEventArgs e)
         {
-            string text = InputTextBox.Text;
+            string text = InputTextBox.Text ?? "";
             var outW = new OutputWindow(text);
             outW.Show();
         }
+
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
             InputTextBox.Clear();

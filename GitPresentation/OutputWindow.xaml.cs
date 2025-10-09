@@ -25,7 +25,11 @@ namespace GitPresentation
             OutputTextBlock.Text = text;
         }
 
-        
+        private void Copy_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(OutputTextBlock.Text ?? "");
+            MessageBox.Show("Текст скопирован в буфер обмена", "Копирование", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
         private void Close_Click(object sender, RoutedEventArgs e)
         {
